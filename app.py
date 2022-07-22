@@ -31,9 +31,9 @@ def index():
         r1=model1.predict([[rates]])
         model2=joblib.load("tree")
         r2=model2.predict([[rates]])
-        return(render_template("index.html",results1=r1,result2=r2))
+        return(render_template("index.html",result1=r1,result2=r2))
     else:
-        return(render_template("index.html",results1="WARNING",result2="WARNING"))
+        return(render_template("index.html",result1="WARNING",result2="WARNING"))
 
 
 # In[ ]:
